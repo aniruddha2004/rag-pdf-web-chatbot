@@ -80,15 +80,5 @@ Feedback and contributions are always welcome! Users can report issues, suggest 
 
 ---
 
-## Acknowledgments
-Special thanks to:
-- **OpenAI** for powering the chatbot with GPT models.
-- **LangChain** for enabling retrieval and tool-based agents.
-- **Tavily** for web search functionality.
-- **Gradio** for the interactive user interface.
-- **Chroma** for managing vector databases.
-
----
-
 
   
