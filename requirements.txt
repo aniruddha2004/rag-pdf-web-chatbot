@@ -5,4 +5,3 @@ langchain_chroma
 pypdf
 gradio
 python-dotenv
-markdownify

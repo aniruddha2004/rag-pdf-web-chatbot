@@ -1,5 +1,4 @@
 import os
-from markdownify import markdownify as md_to_text
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
@@ -12,7 +11,6 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 import gradio as gr
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
-import warnings
 
 load_dotenv()
 
@@ -88,9 +86,7 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 def ask_question(question):
     try:
         response = agent_executor.invoke({"input": question})
-        plain_text = md_to_text()  # Convert Markdown to plain text
-        print(plain_text)
-        return plain_text
+        return response["output"]
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
