@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-upload.css') }}">
+    <script defer src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload a PDF File</h1>
+
+        <!-- Hidden File Input -->
+        <input type="file" id="pdfFile" onchange="displayFileName()">
+        
+        <!-- Custom File Upload Button -->
+        <label for="pdfFile" class="custom-file-upload">Choose File</label>
+
+        <!-- Display Selected File Name -->
+        <p id="file-name">No file chosen</p>
+
+        <!-- Upload Button -->
+        <button id="uploadButton" onclick="uploadPDF()">Upload</button>
+
+        <!-- Loader (Hidden initially) -->
+        <div id="loading" class="hidden">
+            <p>Processing file...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+</body>
+</html>

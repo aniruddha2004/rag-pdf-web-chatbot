@@ -1,0 +1,153 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Upload Container */
+.upload-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+h1 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Hides default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-weight: 500;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.custom-file-upload:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #2b5876;
+    border-color: white;
+}
+
+/* Displays selected file name */
+#file-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    margin-bottom: 15px;
+}
+
+/* Upload Button */
+button {
+    background: linear-gradient(90deg, #ff8c00, #ff3b3b);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 5px 15px rgba(255, 56, 56, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff3b3b, #ff8c00);
+    box-shadow: 0px 8px 20px rgba(255, 56, 56, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Loader */
+#loading {
+    display: none;
+    margin-top: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .upload-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    label, button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

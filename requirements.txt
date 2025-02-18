@@ -5,3 +5,4 @@ langchain_chroma
 pypdf
 gradio
 python-dotenv
+flask
