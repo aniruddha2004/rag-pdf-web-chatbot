@@ -7,7 +7,7 @@ This project demonstrates an **agentic Retrieval-Augmented Generation (RAG)** im
 - Retrieve additional context via web searches using Tavily when the answer isn't found in the PDF.
 - Leverage a tool-calling agent that orchestrates interactions between the tools and the OpenAI language model.
 
-Built with OpenAI, LangChain, Tavily, Chroma, and Gradio, this project offers a seamless and intelligent way to interact with document content and online information.
+Built with OpenAI, LangChain, Tavily, Chroma, HTML, CSS and JavaScript, this project offers a seamless and intelligent way to interact with document content and online information.
 
 
 ---
@@ -15,12 +15,12 @@ Built with OpenAI, LangChain, Tavily, Chroma, and Gradio, this project offers a 
 ## Features
 - **PDF-Based Question Answering**: Extracts and retrieves answers from uploaded PDF documents.
 - **Web Search Integration**: Performs web searches for questions outside the PDF scope using Tavily.
-- **Interactive UI**: Built with Gradio for a user-friendly experience.
+- **Interactive UI**: Built with vanilla HTML, CSS, and JavaScript for a user-friendly experience.
 
 ---
 
 ## Tech Stack
-- **Frontend**: Gradio for the chatbot interface.
+- **Frontend**: HTML, CSS, and JavaScript for the chatbot interface.
 - **Backend**:
   - LangChain for chaining LLM capabilities.
   - OpenAI's GPT-4o-mini model for LLM responses.
